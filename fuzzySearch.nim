@@ -1,0 +1,3 @@
+
+proc simple*() =
+    echo "Hello"
