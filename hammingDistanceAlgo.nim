@@ -20,7 +20,7 @@ type
 
 
 
-proc calcHammingDistance*(str1: string, str2: string, verbose: bool = false): HammingDistanceResult =
+proc calcHammingDistance*(str1: string, str2: string): HammingDistanceResult =
     ## Where the Hamming distance between two strings of equal length is the number of positions at which the corresponding character is different.
 
     let str1Len = len(str1)
@@ -64,9 +64,9 @@ proc calcHammingDistance*(str1: string, str2: string, verbose: bool = false): Ha
                                    identicalIndexesSeq: identicalIndexesSeq,
                                    dissimilarityMapSeq: dissimilarityMapSeq)
 
-    if verbose:
-        for fieldName, fieldValue in hammingDistanceResult.fieldPairs:
-            echo fieldName," ",  fieldValue
+    # if verbose:
+    #     for fieldName, fieldValue in hammingDistanceResult.fieldPairs:
+    #         echo fieldName," ",  fieldValue
 
     return hammingDistanceResult
 
