@@ -12,7 +12,7 @@ import neo
 #     pass
 
 
-proc levin*(str1: string, str2: string): int =
+proc calcLevinshteinDistance*(str1: string, str2: string): int =
     # Note Levenshtein matrix is 1 indexed.
     # TODO: should we convert string into list for performance?
 
@@ -58,9 +58,9 @@ proc levin*(str1: string, str2: string): int =
                 cost = 1
 
             var levenHolder = @[
-                    levMatrix[(idx - 1), jdx]  + 1,
-                    levMatrix[idx, (jdx - 1)] + 1,
-                    levMatrix[(idx - 1), (jdx - 1)] + cost,
+                    levMatrix[(idx - 1), jdx]  + 1, # deletion
+                    levMatrix[idx, (jdx - 1)] + 1,  # insertion
+                    levMatrix[(idx - 1), (jdx - 1)] + cost, # substitution
             ]
             echo fmt"levenHolder = {levenHolder}"
 
