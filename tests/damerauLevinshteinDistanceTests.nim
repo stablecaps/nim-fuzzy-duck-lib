@@ -1,6 +1,6 @@
 import std/strformat
 import std/tables
-import ../../src/DamerauLevenshteinDistanceAlgo
+import ../src/nim_fuzzy_duck_lib/DamerauLevenshteinDistanceAlgo
 
 # https://www.reddit.com/r/nim/comments/7dm3le/tutorial_for_types_having_a_hard_time/
 # TODO: lookup object vs ref

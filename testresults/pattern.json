@@ -1,0 +1,2 @@
+[
+{"name":"tests/damerauLevinshteinDistanceTests.nim c","category":"pattern","target":"c","action":"run","result":"reSuccess","expected":"","given":"","machine":"kolkal","commit":"acbd19c2d8e","branch":"main"}]

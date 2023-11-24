@@ -14,5 +14,8 @@ requires "nim >= 1.6.12"
 # tasks
 
 task test, "Runs the test suite":
-    # exec "testament --colors:on --failing run tests/dlsd/damerauLevinshteinDistanceTests.nim"
-    exec "testament --colors:on --failing all"
+    exec "testament pattern tests/*.nim"
+    #exec "testament --colors:on --failing all"
+
+task exedev, "Builds the release version of the nim app":
+  exec "nim c -d:debug -d:ssl -o:bin/nim_fuzzy_duck_lib -r src/nim_fuzzy_duck_lib.nim"
