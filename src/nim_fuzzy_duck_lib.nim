@@ -9,9 +9,9 @@
 
 # import fuzzySearch
 import std/strformat
-import nim_fuzzy_duck_lib/hammingDistanceAlgo
-import nim_fuzzy_duck_lib/LevenshteinDistanceAlgo
-import nim_fuzzy_duck_lib/DamerauLevenshteinDistanceAlgo
+import nim_fuzzy_duck_lib/algoHammingDistance
+import nim_fuzzy_duck_lib/algoLevenshteinDistance
+import nim_fuzzy_duck_lib/algoDamerauLevenshteinDistance
 
 
 # simple()

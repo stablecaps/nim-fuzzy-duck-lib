@@ -19,3 +19,6 @@ task test, "Runs the test suite":
 
 task exedev, "Builds the release version of the nim app":
   exec "nim c -d:debug -d:ssl -o:bin/nim_fuzzy_duck_lib -r src/nim_fuzzy_duck_lib.nim"
+
+task builddocs, "Builds HTML documentation ofthe nim app":
+  exec "nim doc --project --index:on --outdir:htmldocs ./src/nim_fuzzy_duck_lib.nim"
