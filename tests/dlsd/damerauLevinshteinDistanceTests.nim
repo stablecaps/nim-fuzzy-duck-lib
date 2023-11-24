@@ -1,7 +1,6 @@
-import ../../src/DamerauLevenshteinDistanceAlgo
-
+import std/strformat
 import std/tables
-
+import ../../src/DamerauLevenshteinDistanceAlgo
 
 # https://www.reddit.com/r/nim/comments/7dm3le/tutorial_for_types_having_a_hard_time/
 # TODO: lookup object vs ref
@@ -24,12 +23,13 @@ let dlsdTestData: seq[TestDataPoint] = @[
     TestDataPoint(Title: "adding to middle and both ends", Str1: "zt", Str2: "azerty", Expected: 4),
     TestDataPoint(Title: "removing from end???", Str1: "azer", Str2: "azerty", Expected: 2),
     TestDataPoint(Title: "removing from start???", Str1: "erty", Str2: "azerty", Expected: 2),
+    # TestDataPoint(Title: "check transposition", Str1: "ca", Str2: "abc", Expected: 2),
 ]
 
 for idx, test in dlsdTestData:
     echo idx, "=", test.Title
     var damerauLevinDistance = calcDamerauLevinshteinDistance(test.Str1, test.Str2)
-    assert damerauLevinDistance == test.Expected, "damerauLevinDistance does not match"
+    assert damerauLevinDistance == test.Expected, fmt"<{test.Title}> failed. Got <{damerauLevinDistance}>, but expected <{test.Expected}>"
 
 
 
