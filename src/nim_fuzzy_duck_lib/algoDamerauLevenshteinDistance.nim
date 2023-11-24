@@ -12,7 +12,7 @@ import neo
 #     pass
 
 
-proc calcDamerauLevinshteinDistance*(str1: string, str2: string): int =
+proc damerauLevinshteinDist*(str1: string, str2: string): int =
     # Note Levenshtein matrix is 1 indexed.
     # TODO: should we convert string into list for performance?
 
@@ -81,7 +81,7 @@ proc calcDamerauLevinshteinDistance*(str1: string, str2: string): int =
     let levinDistance = levMatrix[str1Len, str2Len]
     return levinDistance
 
-proc calcDamerauLevinshteinDistanceRestricted*(str1: string, str2: string): int =
+proc damerauLevinshteinDistRestricted*(str1: string, str2: string): int =
     # Optimal String Alignment Distance (or Restricted Edit Distance)
 
     return 42

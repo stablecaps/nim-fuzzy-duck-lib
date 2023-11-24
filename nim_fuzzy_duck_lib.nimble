@@ -17,7 +17,7 @@ task test, "Runs the test suite":
     exec "testament pattern tests/*.nim"
     #exec "testament --colors:on --failing all"
 
-task exedev, "Builds the release version of the nim app":
+task buildev, "Builds the release version of the nim app":
   exec "nim c -d:debug -d:ssl -o:bin/nim_fuzzy_duck_lib -r src/nim_fuzzy_duck_lib.nim"
 
 task builddocs, "Builds HTML documentation ofthe nim app":

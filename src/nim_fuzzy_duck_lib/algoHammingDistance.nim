@@ -20,7 +20,7 @@ type
 
 
 
-proc calcHammingDistance*(str1: string, str2: string): HammingDistanceResult =
+proc hammingDist*(str1: string, str2: string): HammingDistanceResult =
     ## Where the Hamming distance between two strings of equal length is the number of positions at which the corresponding character is different.
 
     let str1Len = len(str1)

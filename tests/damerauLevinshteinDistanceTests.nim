@@ -28,7 +28,7 @@ let dlsdTestData: seq[TestDataPoint] = @[
 
 for idx, test in dlsdTestData:
     echo idx, "=", test.Title
-    var damerauLevinDistance = calcDamerauLevinshteinDistance(test.Str1, test.Str2)
+    var damerauLevinDistance = damerauLevinshteinDist(test.Str1, test.Str2)
     assert damerauLevinDistance == test.Expected, fmt"<{test.Title}> failed. Got <{damerauLevinDistance}>, but expected <{test.Expected}>"
 
 

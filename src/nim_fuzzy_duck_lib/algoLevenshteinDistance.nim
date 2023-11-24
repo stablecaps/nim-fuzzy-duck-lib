@@ -12,7 +12,7 @@ import neo
 #     pass
 
 
-proc calcLevinshteinDistance*(str1: string, str2: string): int =
+proc levinshteinDist*(str1: string, str2: string): int =
     # Note Levenshtein matrix is 1 indexed.
     # TODO: should we convert string into list for performance?
 
