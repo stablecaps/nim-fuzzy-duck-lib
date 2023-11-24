@@ -5,8 +5,8 @@
 #
 # To run these tests, simply execute `nimble test`.
 
-import unittest
+# import unittest
 
-import nim_fuzzy_duck_lib
-test "can add":
-  check add(5, 5) == 10
+# import nim_fuzzy_duck_lib
+# test "can add":
+#   check add(5, 5) == 10
