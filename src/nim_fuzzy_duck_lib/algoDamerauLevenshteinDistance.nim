@@ -12,6 +12,8 @@ import neo
 #     pass
 
 
+# TODO: fix this is broken
+# fails on TestDataPoint(Title: "check transposition", Str1: "ca", Str2: "abc", Expected: 2),
 proc damerauLevinshteinDist*(str1: string, str2: string): int =
     # Note Levenshtein matrix is 1 indexed.
     # TODO: should we convert string into list for performance?

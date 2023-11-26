@@ -5,31 +5,31 @@ import ../src/nim_fuzzy_duck_lib/algoDamerauLevenshteinDistance
 # https://www.reddit.com/r/nim/comments/7dm3le/tutorial_for_types_having_a_hard_time/
 # TODO: lookup object vs ref
 type TestDataPoint = ref object
-    Title: string
-    Str1: string
-    Str2: string
-    Expected: int
+    title: string
+    str1: string
+    str2: string
+    expected: int
 
 
 
 let dlsdTestData: seq[TestDataPoint] = @[
-    TestDataPoint(Title: "empty string on Str1", Str1: "", Str2: "shouldBeThisLen", Expected: 15),
-    TestDataPoint(Title: "empty string on Str2", Str1: "shouldBeThisLen", Str2: "", Expected: 15),
-    TestDataPoint(Title: "empty string on both", Str1: "", Str2: "", Expected: 0),
-    TestDataPoint(Title: "adding to end", Str1: "azer", Str2: "azerty", Expected: 2),
-    TestDataPoint(Title: "adding to start", Str1: "erty", Str2: "azerty", Expected: 2),
-    TestDataPoint(Title: "adding to both ends", Str1: "zert", Str2: "azerty", Expected: 2),
-    TestDataPoint(Title: "adding to middle", Str1: "azty", Str2: "azerty", Expected: 2),
-    TestDataPoint(Title: "adding to middle and both ends", Str1: "zt", Str2: "azerty", Expected: 4),
-    TestDataPoint(Title: "removing from end???", Str1: "azer", Str2: "azerty", Expected: 2),
-    TestDataPoint(Title: "removing from start???", Str1: "erty", Str2: "azerty", Expected: 2),
-    # TestDataPoint(Title: "check transposition", Str1: "ca", Str2: "abc", Expected: 2),
+    TestDataPoint(title: "empty string on str1", str1: "", str2: "shouldBeThisLen", expected: 15),
+    TestDataPoint(title: "empty string on str2", str1: "shouldBeThisLen", str2: "", expected: 15),
+    TestDataPoint(title: "empty string on both", str1: "", str2: "", expected: 0),
+    TestDataPoint(title: "adding to end", str1: "azer", str2: "azerty", expected: 2),
+    TestDataPoint(title: "adding to start", str1: "erty", str2: "azerty", expected: 2),
+    TestDataPoint(title: "adding to both ends", str1: "zert", str2: "azerty", expected: 2),
+    TestDataPoint(title: "adding to middle", str1: "azty", str2: "azerty", expected: 2),
+    TestDataPoint(title: "adding to middle and both ends", str1: "zt", str2: "azerty", expected: 4),
+    TestDataPoint(title: "removing from end???", str1: "azer", str2: "azerty", expected: 2),
+    TestDataPoint(title: "removing from start???", str1: "erty", str2: "azerty", expected: 2),
+    # TestDataPoint(title: "check transposition", str1: "ca", str2: "abc", expected: 2),
 ]
 
 for idx, test in dlsdTestData:
-    echo idx, "=", test.Title
-    var damerauLevinDistance = damerauLevinshteinDist(test.Str1, test.Str2)
-    assert damerauLevinDistance == test.Expected, fmt"<{test.Title}> failed. Got <{damerauLevinDistance}>, but expected <{test.Expected}>"
+    echo idx, "=", test.title
+    var damerauLevinDistance = damerauLevinshteinDist(test.str1, test.str2)
+    assert damerauLevinDistance == test.expected, fmt"<{test.title}> failed. Got <{damerauLevinDistance}>, but expected <{test.expected}>"
 
 
 

@@ -61,6 +61,16 @@ t is half of the number of transpositions
 
 The Jaro similarity returns a score between 0 and 1, where 0 represents no match, and 1 represents that the strings are exactly alike. Jaro-Winkler modifies the formula by applying more weightage to the first i matching characters. I will not go into too much detail, but the final form is represented by the equation below.
 
+11. Norvig's Spelling Corrector
+12. SymSpell (Symmetric Delete spelling correction algorithm)
+13. LinSpell (Linear search spelling correction algorithm)
+14. strike a match
+http://www.catalysoft.com/articles/StrikeAMatch.html
+
+15. trie
+
+
+
 0. https://www.amygb.ai/blog/how-does-fuzzy-matching-work
 
 1. https://stackoverflow.com/questions/32337135/fuzzy-search-algorithm-approximate-string-matching-algorithm
